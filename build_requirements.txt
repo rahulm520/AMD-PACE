@@ -1,0 +1,6 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.7.0+cpu
+clang-format>=17.0.6
+cmake==3.31.6
+setuptools>=77.0.3
+ninja>=1.11

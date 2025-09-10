@@ -1,0 +1,42 @@
+{
+    "frameworks": [
+        "pace",
+        "hf"
+    ],
+    "model_args": {
+        "model_name": "Qwen/Qwen2.5-7B-Instruct",
+        "dtype": "bf16",
+        "llm_operators": {
+            "Norm": "NATIVE",
+            "QKVProjection": "TPP",
+            "Attention" : "JIT",
+            "OutProjection": "TPP",
+            "MLP": "TPP",
+            "LMHead": "TPP"
+        },
+        "spec_config": {
+            "model_name": "amd/PARD-Qwen2.5-0.5B",
+            "num_speculated_tokens": 12
+        }
+    },
+    "use_real_data": true,
+    "generation_args": {
+        "input_tokens": 128,
+        "output_tokens": 128,
+        "batch_size": 1,
+        "num_beams": 1,
+        "kv_cache_type": "BMC",
+        "do_sample": false,
+        "manual_seed": 0
+    },
+    "warmup_runs": 1,
+    "num_runs": 2,
+    "visualize": false,
+    "verbose": true,
+    "output_dir": "./benchmark_results",
+    "token_metrics": {
+        "time_to_first_token": false,
+        "time_per_tokens": false
+    },
+    "system_metrics": false
+}

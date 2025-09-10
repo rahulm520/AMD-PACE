@@ -1,0 +1,45 @@
+{
+    "model_args": {
+        "model_name": "Qwen/Qwen2.5-7B-Instruct",
+        "tokenizer_name": "facebook/opt-125m",
+        "dtype": "bf16",
+        "llm_operators": {
+            "Norm": "NATIVE",
+            "QKVProjection": "TPP",
+            "Attention" : "JIT",
+            "OutProjection": "TPP",
+            "MLP": "TPP",
+            "LMHead": "TPP"
+        },
+        "spec_config": null
+    },
+    "generation_args": {
+        "batch_size": 1,
+        "num_beams": 1,
+        "kv_cache_type": "BMC"
+    },
+    "tasks": [
+        {
+            "task_name": "mmlu",
+            "num_fewshot": 5,
+            "limit": 1
+        },
+        {
+            "task_name": "arc_easy",
+            "num_fewshot": 25,
+            "limit": 1
+        },
+        {
+            "task_name": "bbh_cot_fewshot",
+            "num_fewshot": 3,
+            "limit": 1
+        },
+        {
+            "task_name": "gsm8k",
+            "num_fewshot": 8,
+            "limit": 1
+        }
+    ],
+    "verbose": true,
+    "output_dir": "./evaluation_results"
+}
