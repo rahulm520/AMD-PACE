@@ -1,5 +1,5 @@
 name: DeployGuard Trigger
-on: [push, pull_request, workflow_run]
+on: [push, pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
