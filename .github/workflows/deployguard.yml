@@ -2,6 +2,6 @@ name: DeployGuard Trigger
 on: [push, pull_request, workflow_run]
 jobs:
   build:
-      runs-on: ubuntu-latest
-          steps:
-                - run: echo "Triggering DeployGuard for AMD-PACE"
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Triggering DeployGuard for AMD-PACE"
