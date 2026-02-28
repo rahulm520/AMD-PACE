@@ -1,4 +1,4 @@
-# AMD PACE - AMD Platform Aware Compute Engine
+# AMD PACE - AMD Platform Aware Compute Engine..
 
 To meet the demands of rapidly advancing research, we’re introducing AMD PACE — an inference-serving solution for high-performance LLMs on AMD platforms. AMD PACE makes it fast and easy to integrate research ideas and accelerate real-time deployment.
 
